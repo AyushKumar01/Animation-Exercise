@@ -1,0 +1,84 @@
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.625rem 1rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  background: #000;
+  color: #fff;
+  -webkit-transition: background 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn--space {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../../assets/images/nebula-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/nebula-bg.jpg);
+  background-position: left center;
+}
+
+.btn--space:hover {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../assets/images/nebula-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../assets/images/nebula-bg.jpg);
+  background-position: right center;
+}
+
+/* box-sizing fix */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* root element */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: coral;
+  max-width: 30%;
+}
+
+a:hover {
+  text-decoration: none;
+  color: skyblue;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.animation-group {
+  border: 1px solid #e6e6e6;
+  padding: 0.625rem 0;
+}
+/*# sourceMappingURL=main.css.map */
