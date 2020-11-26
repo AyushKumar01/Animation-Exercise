@@ -1,0 +1,119 @@
+.animation-rotation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.animation-group__rotation {
+    width: 16rem;
+    height: 20rem;
+    margin-bottom: 2rem;
+}
+.rotate-elem {
+    position: relative;
+    margin: 3rem auto;
+    // margin: 0 auto;
+    background: linear-gradient(
+      45deg,
+      rgba(243, 72, 104, 1) 20.25%,
+      rgba(242, 71, 104, 1) 20.25%,
+      rgba(158, 0, 236, 1) 80.25%
+    );
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    transition: $transition-speed * 1.5;
+    &:hover {
+      transform: rotate(180deg * 2);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: $black;
+      border-radius: 50%;
+      width: 10%;
+      height: 10%;
+      left: 50%;
+      top: -12%;
+      transform: translateX(-50%);
+    }
+    // &__title {
+
+    // }
+  }
+
+//   .modal-box {
+//     position: fixed;//no
+//     top: 5vh;//no
+//     left: 50%;//no
+//     display: inline-block;//no
+//     padding: 1rem;//no
+//     width: 90%;//no
+//     height: 90vh;//no
+//     background: rgba($secondary-color, 0.96); // no
+//     opacity: 0;//no
+//     transform: translate(-50%, -110%);
+//     animation: slide-fade 0.5s 2s ease-in-out forwards;
+//     animation-play-state: paused;
+//     // &--is-active {
+//     //   animation-play-state: running;
+//     // }
+//   }
+  
+  
+  .rotate-elem-anim {
+    position: relative;
+    margin: 3rem auto;
+    cursor: pointer;
+    // background: lighten($black, 25%);
+    background: linear-gradient(
+        180deg,
+        rgba(243, 72, 104, 1) 20.25%,
+        rgba(242, 71, 104, 1) 20.25%,
+        rgba(158, 0, 236, 1) 80.25%
+      );
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    animation: rotate $transition-speed * 5 linear infinite;
+    animation-play-state: running;
+    &:hover {
+      animation-play-state: paused;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: $black;
+      border-radius: 50%;
+      width: 10%;
+      height: 10%;
+      left: 50%;
+      bottom: -20%;
+      transform: translateX(-50%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: $black;
+      border-radius: 50%;
+      width: 10%;
+      height: 10%;
+      left: 50%;
+      top: -20%;
+      transform: translateX(-50%);
+    }
+  }
+.animation-group__pop {
+    width: 16rem;
+    height: 20rem;
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-elem {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid black;
+    border-radius: 50%;
+}

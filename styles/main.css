@@ -1,3 +1,103 @@
+@-webkit-keyframes slide-fade {
+  from {
+    -webkit-transform: translateX(-25vw);
+            transform: translateX(-25vw);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(25vw);
+            transform: translateX(25vw);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-fade {
+  from {
+    -webkit-transform: translateX(-25vw);
+            transform: translateX(-25vw);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateX(25vw);
+            transform: translateX(25vw);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes colors {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+@keyframes colors {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes inOut {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+
+@keyframes inOut {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+
 .btn {
   text-decoration: none;
   display: inline-block;
@@ -30,6 +130,182 @@
   background-position: right center;
 }
 
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  margin: 0.187rem;
+  width: 100%;
+  max-width: 18.75rem;
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card__text-wrapper {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card:hover .card__img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.card__img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.card__text-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.625rem;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card__title {
+  margin: 0.625rem 0;
+  line-height: 1.75rem;
+  color: #000;
+}
+
+.card__description {
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+  color: #000;
+}
+
+.animation-rotation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.animation-group__rotation {
+  width: 16rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+
+.rotate-elem {
+  position: relative;
+  margin: 3rem auto;
+  background: linear-gradient(45deg, #f34868 20.25%, #f24768 20.25%, #9e00ec 80.25%);
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+
+.rotate-elem:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rotate-elem::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  left: 50%;
+  top: -12%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.rotate-elem-anim {
+  position: relative;
+  margin: 3rem auto;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20.25%, #f34868), color-stop(20.25%, #f24768), color-stop(80.25%, #9e00ec));
+  background: linear-gradient(180deg, #f34868 20.25%, #f24768 20.25%, #9e00ec 80.25%);
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  -webkit-animation: rotate 2.5s linear infinite;
+          animation: rotate 2.5s linear infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.rotate-elem-anim:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.rotate-elem-anim::before {
+  content: "";
+  position: absolute;
+  background: #000;
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  left: 50%;
+  bottom: -20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.rotate-elem-anim::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  left: 50%;
+  top: -20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.animation-group__pop {
+  width: 16rem;
+  height: 20rem;
+  margin-bottom: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pop-elem {
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
 /* box-sizing fix */
 * {
   -webkit-box-sizing: border-box;
@@ -54,6 +330,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -79,6 +357,24 @@ main {
 
 .animation-group {
   border: 1px solid #e6e6e6;
-  padding: 0.625rem 0;
+  padding: 0.625rem 0 1rem;
+}
+
+.footer {
+  min-width: 100vw;
+  position: fixed;
+  bottom: 0;
+  -webkit-animation: colors 5s infinite;
+          animation: colors 5s infinite;
+}
+
+.footer__heading {
+  -webkit-animation: slide-fade 4s ease-in-out forwards;
+          animation: slide-fade 4s ease-in-out forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

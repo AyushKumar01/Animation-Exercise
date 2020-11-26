@@ -1,5 +1,8 @@
 @import "./partials/variables";
+@import "./partials/mixin";
 @import "./partials/button";
+@import "./partials/photo";
+@import "./partials/rotate";
 
 /* box-sizing fix */
 * {
@@ -20,6 +23,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -40,5 +45,17 @@ main {
 }
 .animation-group {
   border: 1px solid darken($white, 10%);
-  padding: 0.625rem 0;
+  padding: 0.625rem 0 1rem;
+}
+.footer {
+  min-width: 100vw;
+  position: fixed;
+  bottom: 0;
+  animation: colors 5s infinite;
+  &__heading {
+     animation: slide-fade 4s ease-in-out forwards;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+     color: #fff;
+  }
 }
