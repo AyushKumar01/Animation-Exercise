@@ -4,13 +4,10 @@
 @import "./partials/photo";
 @import "./partials/rotate";
 
-/* box-sizing fix */
+
 * {
   box-sizing: border-box;
-  // border: 1px dashed lightgrey;
 }
-
-/* root element */
 html {
   font-size: 16px;
 }
@@ -35,6 +32,9 @@ a {
   text-decoration: none;
   color: $primary-color;
   max-width: 30%;
+  // position: relative;
+  // top: 30%;
+  cursor: pointer;
   &:hover {
     text-decoration: none;
     color: $secondary-color;
@@ -53,7 +53,7 @@ main {
   bottom: 0;
   animation: colors 5s infinite;
   &__heading {
-     animation: slide-fade 4s ease-in-out forwards;
+     animation: colors-fade 4s ease-in-out forwards;
      animation-direction: alternate;
      animation-iteration-count: infinite;
      color: #fff;
