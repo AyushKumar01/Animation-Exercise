@@ -55,7 +55,7 @@
     background: rgba(158, 0, 236, 0.9); // no
     opacity: 0;//no
     transform: translate(-50%, -110%);
-    animation: slide-fade 0.5s 5s ease-in-out forwards;
+    animation: slide-fade 2s 3s ease-in-out forwards;
     animation-play-state: paused;
     &--is-active {
       animation-play-state: running;

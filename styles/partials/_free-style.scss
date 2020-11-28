@@ -1,0 +1,39 @@
+.free-style {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #314964;
+    // padding: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__text {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: #fff;
+    }
+    &__wrapper {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        // background-color: blue;
+    }
+    &__wrapper-item {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+    }
+    &__wrapper-item1 {
+        animation: boxOne 10s 0s ease-in-out infinite forwards;
+    }
+    &__wrapper-item2 {
+        animation: boxTwo 10s 0s ease-in-out infinite forwards;
+    }
+    &__wrapper-item3 {
+        animation: boxThree 10s 0s ease-in-out infinite forwards;
+    }
+}
