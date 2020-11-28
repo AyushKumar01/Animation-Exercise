@@ -418,13 +418,15 @@
           transform: translate(-50%, -110%);
   -webkit-animation: slide-fade 2s 3s ease-in-out forwards;
           animation: slide-fade 2s 3s ease-in-out forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
 }
 
 .slide-box--is-active {
   -webkit-animation-play-state: running;
           animation-play-state: running;
+}
+
+.slide-box:hover {
+  display: none;
 }
 
 .rotate-elem-anim {
@@ -496,6 +498,14 @@
   border-radius: 50%;
   -webkit-animation: inOut 1.5s ease-out infinite alternate;
           animation: inOut 1.5s ease-out infinite alternate;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  cursor: pointer;
+}
+
+.pop-elem:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .free-style {

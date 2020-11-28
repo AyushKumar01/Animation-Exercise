@@ -56,9 +56,12 @@
     opacity: 0;//no
     transform: translate(-50%, -110%);
     animation: slide-fade 2s 3s ease-in-out forwards;
-    animation-play-state: paused;
+    // animation-play-state: paused;
     &--is-active {
       animation-play-state: running;
+    }
+    &:hover {
+      display: none;
     }
   }
   
@@ -67,7 +70,6 @@
     position: relative;
     margin: 3rem auto;
     cursor: pointer;
-    // background: lighten($black, 25%);
     background: linear-gradient(
         180deg,
         rgba(243, 72, 104, 1) 20.25%,
@@ -120,4 +122,9 @@
     margin: 2.25rem auto 0;
     border-radius: 50%;
     animation: inOut 1.5s ease-out infinite alternate;
+    animation-play-state: running;
+    cursor: pointer;
+    &:hover {
+      animation-play-state: paused;
+    }
 }
